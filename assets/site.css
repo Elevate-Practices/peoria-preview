@@ -192,7 +192,7 @@ a.card:hover{transform:translateY(-3px);background:var(--ice2)}
 .blocks>*{flex:0 1 calc((100% - 32px) / 3);min-width:260px}
 /* a pair of blocks shares the row evenly */
 .blocks>:first-child:nth-last-child(2),.blocks>:first-child:nth-last-child(2)~*{flex-basis:calc((100% - 16px) / 2)}
-.block{background:var(--ice);border-radius:var(--r);padding:32px 28px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.block{background:var(--ice);border-radius:var(--r);padding:32px 28px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
 .block h2{font-size:24px;letter-spacing:-.015em}
 .block p{margin-top:10px;color:var(--ink2);font-size:16px}
 .offers{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:0;list-style:none}
