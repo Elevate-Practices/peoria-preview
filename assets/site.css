@@ -340,3 +340,14 @@ a.card:hover{transform:translateY(-3px);background:var(--ice2)}
 .cmp-next p{color:var(--ink2);margin-top:8px}
 @media (max-width:900px){.cmp-big{grid-template-columns:repeat(2,minmax(0,1fr))}.cmp-phases{grid-template-columns:1fr}.cmp-split{grid-template-columns:1fr}}
 @media (max-width:720px){.cmp-bar{grid-template-columns:1fr;gap:8px}.cmp-upside{grid-template-columns:1fr}.cmp-callout{flex-direction:column;text-align:center}.cmp-metric b{font-size:32px}}
+.cmp-leaks thead th{text-align:left}
+/* $99 ad landing page */
+.lp-hero{padding-top:72px}
+.lp-h1{font-size:clamp(40px,5.6vw,68px);letter-spacing:-.03em;line-height:1.05;margin:0}
+.lp-price{color:var(--blue);white-space:nowrap}
+.lp-sub{margin-top:18px;font-size:20px;color:var(--ink2)}
+.lp-sub s{margin-left:2px}
+.left .lp-chips{justify-content:flex-start}
+.blocks.lp-four>*{flex-basis:calc((100% - 48px) / 4);min-width:200px}
+.lp-steps li{background:var(--ice)}
+@media (max-width:900px){.lp-hero .split{grid-template-columns:1fr;gap:32px}.lp-hero .split-photo{aspect-ratio:4/3;order:-1}.blocks.lp-four>*{flex-basis:calc((100% - 16px) / 2)}}
