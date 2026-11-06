@@ -262,6 +262,7 @@ a.card:hover{transform:translateY(-3px);background:var(--ice2)}
   .head{margin-bottom:36px}
   .hours li{min-width:0}
   .grp .cards>*,.cards>*,.blocks>*{flex-basis:100%;min-width:0}
+  .blocks>:first-child:nth-last-child(2),.blocks>:first-child:nth-last-child(2)~*{flex-basis:100%}
   .pay li{padding:14px 10px}
   .pay b{font-size:15px}
   .pay span{font-size:13px}
