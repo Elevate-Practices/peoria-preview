@@ -108,7 +108,7 @@ svg{width:20px;height:20px;fill:currentColor;flex:none}
 
 /* service cards */
 /* every row of cards is centered, also a short last row (flex-wrap, never an auto-fill grid that leaves empty tracks) */
-.cards,.pay,.blocks{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.cards,.blocks{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
 .cards>*{flex:0 1 calc((100% - 48px) / 4);min-width:240px}
 .grp .cards>*{flex-basis:calc((100% - 32px) / 3)}
 .card{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:32px 24px;border-radius:var(--r);background:var(--ice);color:var(--ink);text-decoration:none;transition:transform .2s,background .2s}
@@ -141,10 +141,10 @@ a.card:hover{transform:translateY(-3px);background:var(--ice2)}
 .dark{background:var(--ink);color:#fff}
 .dark .head p,.dark p{color:#C7D3DE}
 .dark .eyebrow{background:rgba(255,255,255,.08);color:var(--aqua-l)}
-.pay{gap:12px}
-.pay li{flex:0 1 calc((100% - 36px) / 4);min-width:200px}
+/* ways to pay: 8 pills in even rows, 4 across on desktop and 2 across below 900px, every pill the same height */
+.pay{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:1fr;gap:12px}
 .pay li{list-style:none;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:96px;padding:18px;border-radius:var(--r);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
-.pay b{font-size:17px;color:#fff}
+.pay b{font-size:17px;line-height:1.3;color:#fff}
 .pay span{font-size:14px;color:#AFC0CF;margin-top:4px}
 .pay{padding:0;margin:0}
 
@@ -190,6 +190,8 @@ a.card:hover{transform:translateY(-3px);background:var(--ice2)}
 .crumbs a{color:var(--ink2)}
 .crumbs li+li::before{content:"/";margin-right:6px;color:#9AAABA}
 .blocks>*{flex:0 1 calc((100% - 32px) / 3);min-width:260px}
+/* a pair of blocks shares the row evenly */
+.blocks>:first-child:nth-last-child(2),.blocks>:first-child:nth-last-child(2)~*{flex-basis:calc((100% - 16px) / 2)}
 .block{background:var(--ice);border-radius:var(--r);padding:32px 28px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .block h2{font-size:24px;letter-spacing:-.015em}
 .block p{margin-top:10px;color:var(--ink2);font-size:16px}
@@ -236,6 +238,7 @@ a.card:hover{transform:translateY(-3px);background:var(--ice2)}
   .hero-photo{aspect-ratio:4/3;border-radius:24px}
   .hero-card{margin:-56px 12px 0;padding:28px 24px;border-radius:24px}
   .grp .cards>*,.cards>*,.blocks>*{flex-basis:calc((100% - 16px) / 2)}
+  .pay{grid-template-columns:repeat(2,minmax(0,1fr))}
   .offer,.split,.visit,.band-in{grid-template-columns:1fr}
   .offer-copy{padding:40px 24px}
   .offer-photo{aspect-ratio:16/10}
@@ -258,6 +261,9 @@ a.card:hover{transform:translateY(-3px);background:var(--ice2)}
   .foot-in{grid-template-columns:1fr}
   .head{margin-bottom:36px}
   .hours li{min-width:0}
-  .grp .cards>*,.cards>*,.blocks>*,.pay li{flex-basis:100%;min-width:0}
+  .grp .cards>*,.cards>*,.blocks>*{flex-basis:100%;min-width:0}
+  .pay li{padding:14px 10px}
+  .pay b{font-size:15px}
+  .pay span{font-size:13px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
